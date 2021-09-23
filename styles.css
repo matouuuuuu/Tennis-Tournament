@@ -1,0 +1,561 @@
+:root {
+    --main-first-color: #CDDDDD;
+    --main-bg-color: #EEEBD3;
+    --main-third-color: #E57A44;
+    --main-accent-color: #698F3F;
+    --main-text-color: black;
+    --second-text-color: white;
+}
+
+p {
+    color: var( --second-text-color)
+}
+
+#navigation-view {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+#navigation-view>a {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    background-color: var( --main-third-color);
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    font-size: 13px;
+}
+
+#navigation-view>button {
+    margin-right: 30px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+    margin: 0px;
+}
+
+body * {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.buttonDash {
+    background-color: var(--main-accent-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 20px;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.buttonDash p {
+    color: var( --main-first-color);
+    text-align: center;
+}
+
+#dashBoardButton {
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form[id="tournamentCreation"] {
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input[id="output"] {
+    width: 50px;
+}
+
+form[id="tournamentCreation"] button {
+    margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.fullPage {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullPage h1 {
+    justify-self: flex-start;
+}
+
+#info-player {
+    display: flex;
+    background-color: var(--main-accent-color);
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-player {
+    border-radius: 20%;
+}
+
+.ImagePlaceholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+.player {
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: var( --main-accent-color);
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.score {
+    margin-left: auto;
+}
+
+.players {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.player .playerName {
+    padding-left: 10px;
+}
+
+#ImageProfil {
+    width: 50%;
+    max-width: 400px;
+    min-width: 80px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: antiquewhite;
+}
+
+section>ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+li {
+    margin-top: 10px;
+}
+
+#ImageCountry {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+}
+
+#info-player>section {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+#participation {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+body>h1:nth-child(1) {
+    text-align: center;
+}
+
+.match {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.match>div:not(.popup) img {
+    height: 51px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+.match>div:not(.popup) {
+    transition: height 400ms ease;
+    height: 51px;
+    overflow-y: hidden;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%;
+    /* margin: 0 auto; */
+    background-color: var(--main-accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.match>div .terminateButton {
+    transition: opacity 400ms ease;
+    opacity: 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.match>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.match>div form {
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.match>div form>div {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+.idPerson {
+    display: none;
+}
+
+.show {
+    top: 50%!important;
+    opacity: 1!important;
+}
+
+.popup {
+    transition: opacity 300ms ease;
+    cursor: pointer;
+    top: 150%;
+    z-index: 999999;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    opacity: 0;
+    background-color: var(--main-accent-color);
+    transition: opacity 500ms ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.closePopup {
+    height: 20px;
+    width: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+
+.form_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.form_con>form a:hover {
+    color: grey;
+}
+
+.form_con>form a {
+    margin-top: 20px;
+}
+
+.form_con>form input {
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form_con>form button {
+    width: 80px;
+}
+
+.form_con>form p {
+    color: red;
+}
+
+#delPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#delPlayer img {
+    height: 30%;
+    width: 30%;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+#delPlayer>div {
+    display: flex;
+    flex-direction: row;
+}
+
+#info_sup {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+#addPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#popup_addplayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formaddPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formaddPlayer>input {
+    margin-top: 10px;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#checkboxaddPlayer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#selectNat {
+    margin-top: 10px;
+    width: 210px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner p {
+    color: black;
+}
+
+.matchFinished {
+    gap: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+
+.matchFinished>div {
+    height: 41px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--main-third-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    /* align-content: flex-start; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+}
+
+.matchFinished>div>div {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.matchFinished>div>div p {
+    padding: 10px;
+}
+
+.matchFinished>div>div img:not(.medal) {
+    height: 41px;
+    border-radius: 20px;
+}
+
+img.medal {
+    position: absolute;
+    top: 10px;
+    height: 20px;
+    /* width: 10px; */
+}
+
+.head {
+    height: 100px;
+    border-radius: 20px;
+}
+
+.tournois a:not(.finished) {
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: var( --main-accent-color);
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tournois .finished {
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: var( --main-third-color);
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tournois a p {
+    margin: 10px;
+}
+
+.ImagePlaceholderTournament {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.right {
+    right: 0;
+}
+
+.tournois {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    height: 51px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+.tableau {
+    height: 190px;
+    margin: 0 auto;
+    width: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableau>div {
+    display: box;
+    position: absolute;
+    left: 0;
+}
+
+.tableau>div>div {
+    gap: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableau>div>div>div {
+    display: flex;
+}
+
+.match h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.popup button {
+    display: flex;
+    margin: 10px auto;
+}
+
+.match>div>div p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+}
+
+#delTournament {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.statistique {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.statistique div {
+    padding: 10px;
+    background-color: var(--main-accent-color);
+    border-radius: 20px;
+}
